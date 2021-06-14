@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      canvas {
+        border: 1px solid black;
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas" style="border: 1px solid"></canvas>
+    <script>
+      let canvasKita = document.getElementById("myCanvas");
+      let ctx = canvasKita.getContext("2d");
+      canvasKita.width = 600;
+      canvasKita.height = 300;
+
+      let x = 0,
+        y = 0,
+        r = 50;
+      let keatas = true,
+        kebawah = false;
+      let kekanan = false,
+        kekiri = true;
+      function animasi() {
+        ctx.save();
+        ctx.clearRect(0, 0, canvasKita.width, canvasKita.height);
+        ctx.beginPath();
+        ctx.fillStyle = "yellow";
+        ctx.arc(x + r, y + r, r, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.strokeStyle = "red";
+        ctx.arc(x + r, y + r, r, 0, Math.PI * 2);
+        ctx.stroke();
+
+        cekPosisi();
+
+        if (keatas) {
+          y--;
+        }
+        if (kebawah) {
+          y++;
+        }
+        if (kekanan) {
+          x++;
+        }
+        if (kekiri) {
+          x--;
+        }
+        ctx.restore();
+      }
+      setInterval(animasi, 3);
+
+      function cekPosisi() {
+        if (y + r == canvasKita.height - r) {
+          keatas = true;
+          kebawah = false;
+        } else if (y == 0) {
+          keatas = false;
+          kebawah = true;
+        }
+        if (x + r == canvasKita.width - r) {
+          kekanan = false;
+          kekiri = true;
+        } else if (x == 0) {
+          kekanan = true;
+          kekiri = false;
+        }
+      }
+    </script>
+  </body>
+</html>

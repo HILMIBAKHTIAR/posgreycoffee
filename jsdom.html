@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM</title>
+  </head>
+  <body>
+    <h1 id="judul">Belajar Javascript</h1>
+    <p></p>
+    <script>
+      function sekaliClick() {
+        document.querySelector("p").innerHTML = "Dipanggil saat sekali klik";
+      }
+      function duakaliClick() {
+        document.querySelector("p").innerHTML = "Dipanggil saat dua kali klik";
+      }
+      function tampilkanContextMenu() {
+        document.querySelector("p").innerHTML = "Judul di klik kanan";
+      }
+      var h1Node = document.getElementById("judul");
+
+      h1Node.onclick = function () {
+        sekaliClick();
+      };
+      h1Node.ondblclick = function () {
+        duakaliClick();
+      };
+      h1Node.oncontextmenu = function () {
+        tampilkanContextMenu();
+      };
+    </script>
+  </body>
+</html>

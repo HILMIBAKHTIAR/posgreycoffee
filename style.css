@@ -1,0 +1,56 @@
+  body {
+    min-height: 2000;
+  }
+  .jumbotron {
+    padding-top: 2rem;
+    background-color: #5cc3ff;
+  }
+  #Project {
+    padding-top: 70px;
+    background-color: #5cc3ff;
+  }
+  .contact {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: black;
+  }
+  .alamat {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  .text-center {
+    color: black;
+  }
+
+  .nav-link {
+    transition: 0.2s ease-in-out;
+  }
+
+  .nav-link:hover {
+    transform: translateY(-3px);
+    transition: 0.2s ease-in-out;
+  }
+  .githubicon {
+    width: 60px;
+    padding: 5px;
+  }
+  .youtubeicon {
+    width: 60px;
+    padding: 5px;
+  }
+  .igicon {
+    width: 60px;
+    padding: 5px;
+  }
+  .fbicon {
+    width: 60px;
+    padding: 5px;
+  }
+  .waicon {
+    width: 60px;
+    padding: 5px;
+  }
+  .lead1 {
+    padding-top: 3px;
+    font-family: calibri;
+    font-weight: 700;
+    font-size: large;
+  }
